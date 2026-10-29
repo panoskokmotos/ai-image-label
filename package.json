@@ -1,0 +1,19 @@
+{
+  "name": "ai-image-label",
+  "version": "0.1.0",
+  "description": "Detect AI-generation labels in image files: IPTC digital source type, C2PA manifests, and Stable Diffusion / ComfyUI metadata. Zero dependencies, Node and browser.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Panos Kokmotos",
+  "repository": { "type": "git", "url": "git+https://github.com/panoskokmotos/ai-image-label.git" },
+  "keywords": ["ai", "ai-generated", "c2pa", "iptc", "content-credentials", "provenance", "deepfake", "image", "metadata", "stable-diffusion"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": { "typescript": "^5.6.0" }
+}
